@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controllers;
+namespace Arkafe\Website\Controllers;
 
-class Home extends BaseController
+class Site extends BadDragon
 {
     public function index(): string
     {
@@ -18,6 +18,9 @@ class Home extends BaseController
         $session->close();
 
         //echo view("hello", $d);
-        return view('home');
+        //return view('home');
+
+        echo "website";
+        return "!";
     }
 }
