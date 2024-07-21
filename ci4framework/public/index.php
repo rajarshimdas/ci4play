@@ -1,5 +1,7 @@
 <?php
 
+define('RD_ARKAFE', '/var/www/beta/ci4/');
+
 /*
  *---------------------------------------------------------------
  * CHECK PHP VERSION

@@ -30,7 +30,7 @@ class Routing extends BaseRouting
      */
     public array $routeFiles = [
         # APPPATH . 'Config/Routes.php',
-        APPPATH . 'Routes.php',             // RD: My routes file
+        RD_ARKAFE . 'arkafe/Routes.php',             // RD: My routes file
     ];
 
     /**
