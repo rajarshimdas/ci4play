@@ -4,23 +4,34 @@ namespace Arkafe\Website\Controllers;
 
 class Site extends BadDragon
 {
+    protected $s;
+
+    public function __construct()
+    {
+        // Access controls
+    }
+    
+    public function __destruct()
+    {
+        $this->session->close();
+    }
+    
     public function index(): string
     {
         
-        $session = service('session');
+        
         // var_dump($session);
 
         $d = [
             'activePID' => 5,
-            'sessionID' => $session->session_id,
+            'sessionID' => $this->session->session_id,
         ];
 
-        $session->close();
-
-        //echo view("hello", $d);
-        //return view('home');
-
-        echo "website";
+        echo "website: ".$d['sessionID'];
         return "!";
+    }
+
+    public function concert(): string{
+        return 'concert';
     }
 }
